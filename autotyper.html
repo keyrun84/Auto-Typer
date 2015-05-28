@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Bin</title>
+<style type="text/css">
+#myText {
+  display: none;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('body').append('<div id="result" />');
+
+	writeText('#gdfgdfgdf');
+
+});
+
+function writeText(text) {
+
+	theText = text.split('');
+
+	var timeCount = 0;
+	$.each(theText, function(index, value) {
+
+		setTimeout(function() {
+			$('#result').append(value);
+		}, (timeCount * 1000));
+
+		timeCount += 0.1;
+
+	});
+
+}
+</script>
+</head>
+<body>
+</body>
+</html>
